@@ -21,22 +21,26 @@ void Graphics::paintEvent(QPaintEvent *)
     {
         if (shape->stamp == "Shape2DCircle")
         {
+            painter.setBrush(QColor(255, 255, 255, 50));
 //            qDebug() << "Drawing " << shape->stamp;
             painter.drawEllipse(QPointF(shape->x, shape->y), shape->radius, shape->radius);
         }
         else if (shape->stamp == "Shape2DRect")
         {
 //            qDebug() << "Drawing " << shape->stamp;
+            painter.setBrush(QColor(255, 255, 255, 50));
             painter.drawRect(shape->x, shape->y, shape->width, shape->height);
         }
         else if (shape->stamp == "Shape3DCircle")
         {
 //            qDebug() << "Drawing " << shape->stamp;
+            painter.setBrush(QColor(255, 0, 255, 50));
             painter.drawEllipse(QPointF(shape->x, shape->y), shape->radius, shape->radius);
         }
         else if (shape->stamp == "Shape3DRect")
         {
 //            qDebug() << "Drawing " << shape->stamp;
+            painter.setBrush(QColor(255, 0, 255, 50));
             painter.drawRect(shape->x, shape->y, shape->width, shape->height);
         }
     }

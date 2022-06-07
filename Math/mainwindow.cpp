@@ -3,9 +3,6 @@
 
 #include <QDebug>
 #include <QLabel>
-#include "shape2dfactory.h"
-#include "shape3dfactory.h"
-#include "factorymaker.h"
 #include "shape.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -24,7 +21,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::after_btn_add_clicked()
 {
-    AbstractFactory* factory = factory_maker->get_factory(bonusForm->get_factory());
+    AbstractFactory* factory = factory_maker.get_factory(bonusForm->get_factory());
     Shape * a = factory->get_shape(bonusForm->get_shape());
     add_shape(a);
 }

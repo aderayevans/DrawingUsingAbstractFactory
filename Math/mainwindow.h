@@ -6,6 +6,9 @@
 #include "shape.h"
 #include "bonusform.h"
 #include "abstractfactory.h"
+#include "shape2dfactory.h"
+#include "shape3dfactory.h"
+#include "factorymaker.h"
 #include <QListWidgetItem>
 
 QT_BEGIN_NAMESPACE
@@ -38,6 +41,6 @@ private:
     BonusForm *bonusForm;
     std::vector<Shape*> vectorOfShape, backupVectorOfShape;
     QList<QListWidgetItem*> backupListOfItems;
-    FactoryMaker *factory_maker;
+    FactoryMaker factory_maker;
 };
 #endif // MAINWINDOW_H
